@@ -1,11 +1,16 @@
-import { useState }from "react";
+import { useDispatch, useSelector }from "react-redux";
 import './TextInput.css';
 
 export default function TextInput() {
-    const [text, setText] = useState( "?" );
+
+    const dispatch = useDispatch();
+    const text = useSelector(state => state.text);
 
     const handleChange = (event) => {
-        setText( event.target.value );
+        dispatch ({
+            type: "SET_SIZE",
+            payload: event.target.value
+        });
       }
     
     return (
