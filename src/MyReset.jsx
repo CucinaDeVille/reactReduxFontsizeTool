@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useDispatch } from "react-redux";
 import './MyReset.css';
 
 export default function MyInput() {
+
+    const dispatch = useDispatch();
+
     const handleClick = () => {
-        alert("Alles zurücksetzen!")
+        dispatch ({
+            type: "RESET",
+        });
     }
 
     return (
