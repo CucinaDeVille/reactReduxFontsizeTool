@@ -1,11 +1,13 @@
-import { useState }from "react";
+import { useSelector }from "react-redux";
 import './MyOutput.css';
 
 export default function MyOutput() {
-    const size = 24;  
+    const size = useSelector(state => state.size);
+    const text = useSelector(state => state.text);
+
     return (
       <div className='show' style={{fontSize:size}}>
-          Hier soll der Text in der ausgewählten Größe stehen ... 
+          {text}
       </div>
     );
 }
