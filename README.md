@@ -3,9 +3,10 @@
 Create new project with `npm create vite@latest <project-name> -- --template react`
 ... or run this project with `npm run dev`.
 
-Additionally, this project requires the installation of Redux. This can be done by executing the following commands in the projects directory:
+Additionally, this project requires the installation of Redux and Axios. This can be done by executing the following commands in the projects directory:
 - `npm install redux react-redux`
 - `npm install @reduxjs/toolkit`
+- `npm i axios`
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
