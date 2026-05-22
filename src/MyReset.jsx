@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { fetchWiki } from "./fetchWiki";
 import './MyReset.css';
 
 export default function MyInput() {
@@ -6,9 +7,7 @@ export default function MyInput() {
     const dispatch = useDispatch();
 
     const handleClick = () => {
-        dispatch ({
-            type: "RESET",
-        });
+        dispatch (fetchWiki());
     }
 
     return (

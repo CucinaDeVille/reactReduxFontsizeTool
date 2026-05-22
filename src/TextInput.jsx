@@ -4,11 +4,11 @@ import './TextInput.css';
 export default function TextInput() {
 
     const dispatch = useDispatch();
-    const text = useSelector(state => state.text);
+    const text = useSelector(state => state.inputText);
 
     const handleChange = (event) => {
         dispatch ({
-            type: "SET_TEXT",
+            type: "SET_INPUT_TEXT",
             payload: event.target.value
         });
       }

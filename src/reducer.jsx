@@ -1,6 +1,7 @@
 const initialState = {
     size: 16,
-    text: "!"
+    inputText: "!",
+    outputText: "!"
 }
 
 export default function reducer(state = initialState, action) {
@@ -13,10 +14,16 @@ export default function reducer(state = initialState, action) {
                 size: action.payload
             }
 
-        case "SET_TEXT":
+        case "SET_INPUT_TEXT":
             return {
                 ...state,
-                text: action.payload
+                inputText: action.payload, outputText: action.payload
+            }
+
+        case "SET_OUTPUT_TEXT":
+            return {
+                ...state,
+                outputText: action.payload
             }
 
         case "RESET":
