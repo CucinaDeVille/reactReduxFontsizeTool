@@ -8,7 +8,7 @@ export default function TextInput() {
 
     const handleChange = (event) => {
         dispatch ({
-            type: "SET_SIZE",
+            type: "SET_TEXT",
             payload: event.target.value
         });
       }
