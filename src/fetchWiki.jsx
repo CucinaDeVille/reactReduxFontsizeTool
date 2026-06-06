@@ -4,7 +4,7 @@ function getTextFromAxios(responseObj) {
 
     let str;
 
-    if (responseObj.query == undefined) return "---";
+    if (responseObj.query === undefined) return "---";
 
     const keyVal = Object.keys(responseObj.query.pages);
 
