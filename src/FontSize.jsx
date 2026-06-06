@@ -3,19 +3,22 @@ import './FontSize.css';
 
 export default function FontSize() {
 
-  const dispatch = useDispatch();
-  const num = useSelector(state => state.size);
+    // hook to get function to connect to store
+    const dispatch = useDispatch(); // hook returns function that can later be used to send actions to store
 
-  return (
-    <div>
-      FontSize
-      <div className='niceButtons'>
+    // hook to read current state of variable
+    const num = useSelector(state => state.size); // function is provided, redux executes it and returns result
 
-        <span>{num}</span>
+    return (
+        <div>
+            FontSize
+            <div className='niceButtons'>
+                <span>{num}</span>
 
-        <button className='button' onClick={() => dispatch ({type: "SET_SIZE", payload: num +1})}>+</button>
-        <button className='button' onClick={() => dispatch ({type: "SET_SIZE", payload: num -1})}>-</button>
-      </div>
-    </div>
-  );
+                {/* use function to send REQUESTS to store to update variable -> store will forward request to reducer */}
+                <button className='button' onClick={() => dispatch ({type: "SET_SIZE", payload: num +1})}>+</button>
+                <button className='button' onClick={() => dispatch ({type: "SET_SIZE", payload: num -1})}>-</button>
+            </div>
+        </div>
+    );
 }

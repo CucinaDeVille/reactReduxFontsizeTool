@@ -4,6 +4,9 @@ const initialState = {
     outputText: "!"
 }
 
+// executes incoming update requests to variables forwarded by the store
+// variables are not updates, rather an entirely new state is created
+
 export default function reducer(state = initialState, action) {
 
     switch(action.type) {
