@@ -3,8 +3,8 @@ import './FontSize.css';
 
 export default function FontSize() {
 
-    // hook to get function to connect to store
-    const dispatch = useDispatch(); // hook returns function that can later be used to send actions to store
+    // hook returns function that can later be used to send actions to store
+    const dispatch = useDispatch();
 
     // hook to read current state of variable
     const num = useSelector(state => state.size); // function is provided, redux executes it and returns result
