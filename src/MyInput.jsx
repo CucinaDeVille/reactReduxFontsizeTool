@@ -1,4 +1,3 @@
-import { useState }from "react";
 import FontSize from './FontSize';
 import TextInput from './TextInput';
 import MyReset from './MyReset';
